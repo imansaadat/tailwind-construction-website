@@ -37,9 +37,9 @@ module.exports = {
         }
       },
       backgroundImage: {
-        homeSlideOne: "url('/images/home-slide-1.jpg')",
-        homeSlideTwo: "url('/images/home-slide-2.jpg')",
-        homeSlideThree: "url('/images/home-slide-3.jpg')"
+        homeSlideOne: "url('/src/images/home-slide-1.jpg')",
+        homeSlideTwo: "url('/src/images/home-slide-2.jpg')",
+        homeSlideThree: "url('/src/images/home-slide-3.jpg')"
       },
     },
   },

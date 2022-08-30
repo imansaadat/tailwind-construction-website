@@ -713,8 +713,8 @@ body{
   z-index: 20;
 }
 
-.m-2{
-  margin: 0.5rem;
+.m-3{
+  margin: 0.75rem;
 }
 
 .mx-4{
@@ -1064,16 +1064,16 @@ body{
   background-color: rgb(245 191 35 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\'\)\]{
-  background-image: url('');
+.bg-homeSlideOne{
+  background-image: url('/src/images/home-slide-1.jpg');
 }
 
 .bg-homeSlideTwo{
-  background-image: url('/images/home-slide-2.jpg');
+  background-image: url('/src/images/home-slide-2.jpg');
 }
 
 .bg-homeSlideThree{
-  background-image: url('/images/home-slide-3.jpg');
+  background-image: url('/src/images/home-slide-3.jpg');
 }
 
 .bg-cover{
