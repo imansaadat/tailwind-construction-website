@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html{
+    @apply scroll-smooth scroll-py-10
+  }
+  body {
+    @apply font-Poppins;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply w-12 h-12 bg-lightGrey right-0 bottom-0 top-[initial] left-[initial] hover:bg-yellow;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    @apply text-xl text-black
+  }
+  .swiper-button-next:hover::after,
+  .swiper-button-prev:hover::after {
+    @apply text-white;
+  }
+  .swiper-button-prev {
+    @apply right-16
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-3 px-8 capitalize bg-black text-white text-lg inline-block duration-300 cursor-pointer hover:text-black hover:bg-yellow;
+  }
+}
+
+

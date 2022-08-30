@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Light Gallery -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./build/main.css" />
+    <title>tailwind - Construction</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="bg-white shadow-lg shadow-dark fixed top-0 left-0 w-full z-10 py-4"
+    >
+      <div class="container xl:max-w-screen-xl">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="text-2xl md:text-3xl">
+            <a href="#">We<span class="text-yellow">Build</span></a>
+          </div>
+          <!-- Navbar -->
+          <nav class="hidden lg:flex justify-center w-full">
+            <ul class="flex">
+              <li>
+                <a
+                  href="#home"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >about</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blogs"
+                  class="text-xl text-black mx-4 capitalize hover:text-yellow"
+                  >blogs</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- Mobile Menu -->
+          <div
+            id="nav"
+            class="bg-white shadow-md shadow-lightGrey absolute top-0 left-[-320px] duration-500 w-80 h-screen lg:hidden"
+          >
+            <div
+              id="close-menu"
+              class="hover:text-yellow absolute top-2 right-8 cursor-pointer text-4xl hover:rotate-180 duration-500 ease-in-out"
+            >
+              <i class="fas fa-times"></i>
+            </div>
+            <ul
+              class="flex flex-col items-center justify-center h-full space-y-5"
+            >
+              <li>
+                <a
+                  href="#home"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >about</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-lg text-black mx-4 capitalize hover:text-yellow"
+                  >contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blogs"
+                  class="text-xl text-black mx-4 capitalize hover:text-yellow"
+                  >blogs</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Icons -->
+          <div class="flex">
+            <div
+              id="info-icon"
+              class="w-8 h-8 leading-8 md:w-10 md:h-10 md:leading-10 bg-lightGrey text-black cursor-pointer text-center text-lg md:text-xl hover:text-white hover:bg-black"
+            >
+              <i class="fas fa-info-circle bg-light-t"></i>
+            </div>
+            <div
+              id="search-btn"
+              class="ml-4 w-8 h-8 leading-8 md:w-10 md:h-10 md:leading-10 bg-lightGrey text-black cursor-pointer text-center text-lg md:text-xl hover:text-white hover:bg-black"
+            >
+              <i class="fas fa-search"></i>
+            </div>
+            <div
+              id="login-btn"
+              class="ml-4 w-8 h-8 leading-8 md:w-10 md:h-10 md:leading-10 bg-lightGrey text-black cursor-pointer text-center text-lg md:text-xl hover:text-white hover:bg-black"
+            >
+              <i class="fas fa-user"></i>
+            </div>
+            <div
+              id="menu-btn"
+              class="block lg:hidden ml-4 w-8 h-8 leading-8 md:w-10 md:h-10 md:leading-10 bg-lightGrey text-black cursor-pointer text-center text-lg md:text-xl hover:text-white hover:bg-black"
+            >
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+          <!-- Login Form -->
+          <div
+            id="login"
+            class="hidden absolute top-0 left-0 w-full h-screen z-20 bg-lightGrey/75 backdrop-blur duration-500"
+          >
+            <div
+              id="close-login"
+              class="hover:text-yellow absolute top-2 right-8 cursor-pointer text-4xl hover:rotate-180 duration-300 ease-in-out"
+            >
+              <i class="fas fa-times"></i>
+            </div>
+            <div
+              class="flex justify-center items-center w-full h-full animate-fadeIn"
+            >
+              <form
+                action="#"
+                class="bg-white text-center p-4 w-10/12 max-w-[600px] shadow-lg shadow-lightGrey"
+              >
+                <h3 class="text-2xl uppercase">login form</h3>
+                <div class="my-5">
+                  <input
+                    type="email"
+                    placeholder="enter your email"
+                    class="p-4 text-sm sm:text-base w-full text-grey bg-lightGrey focus:outline-yellow caret-yellow"
+                  />
+                </div>
+                <div class="my-5">
+                  <input
+                    type="password"
+                    placeholder="enter your password"
+                    class="p-4 text-sm sm:text-base w-full text-grey bg-lightGrey focus:outline-yellow caret-yellow"
+                  />
+                </div>
+                <div class="flex items-center my-5 text-base text-grey">
+                  <input
+                    type="checkbox"
+                    id="rememberMe"
+                    class="appearance-none w-4 h-4 border border-grey checked:bg-yellow checked:border-transparent"
+                  />
+                  <label
+                    for="rememberMe"
+                    class="ml-2 cursor-pointer text-sm sm:text-base"
+                    >remember me</label
+                  >
+                  <a
+                    href="#"
+                    class="text-sm sm:text-base ml-auto hover:underline hover:text-yellow"
+                    >forgot password?</a
+                  >
+                </div>
+                <input type="submit" value="login now" class="btn w-full" />
+                <p class="text-sm sm:text-base text-grey pt-4">
+                  don't have an account
+                  <a href="#" class="text-yellow">create one!</a>
+                </p>
+              </form>
+            </div>
+          </div>
+          <!-- Search Form -->
+          <div
+            id="search"
+            class="hidden fixed top-0 left-0 w-full h-screen z-10 bg-lightGrey/75 backdrop-blur"
+          >
+            <div
+              id="close-search"
+              class="hover:text-yellow absolute top-2 right-8 cursor-pointer text-4xl hover:rotate-180 duration-300 ease-in-out"
+            >
+              <i class="fas fa-times"></i>
+            </div>
+            <div
+              class="flex justify-center items-center w-full h-full animate-fadeIn"
+            >
+              <form
+                action="#"
+                class="flex justify-between items-center gap-3 bg-white text-center p-4 w-4/5 md:w-2/4 shadow-lg shadow-lightGrey"
+              >
+                <input
+                  type="search"
+                  id="search"
+                  class="p-3 text-base w-full text-grey bg-lightGrey outline-none caret-yellow"
+                  placeholder="search here..."
+                />
+                <label
+                  for="search"
+                  class="text-2xl cursor-pointer hover:text-yellow"
+                >
+                  <i class="fas fa-search"></i>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Info -->
+    <div
+      id="info"
+      class="fixed w-[300px] flex flex-col justify-center items-center bg-white top-0 right-[-350px] h-full z-10 shadow-md shadow-grey duration-500 overflow-auto"
+    >
+      <div
+        id="close-info"
+        class="text-3xl absolute right-8 top-2 cursor-pointer hover:text-yellow hover:rotate-180 duration-300 ease-in-out"
+      >
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="text-center my-5 space-y-3">
+        <i
+          class="fas fa-phone text-lg text-center text-black bg-lightGrey w-10 h-10 leading-10"
+        ></i>
+        <h3 class="text-xl text-black">phone number</h3>
+        <p class="text-sm text-grey leading-5">+989129323358</p>
+        <p class="text-sm text-grey">+989129323358</p>
+      </div>
+      <div class="text-center my-5 space-y-3">
+        <i
+          class="fas fa-envelope pointer-events-none text-lg text-center text-black bg-lightGrey w-10 h-10 leading-10"
+        ></i>
+        <h3 class="text-xl text-black">email address</h3>
+        <p class="text-sm text-grey leading-5">e.saadat72@gmail.com</p>
+        <p class="text-sm text-grey leading-5">e.saadat72@gmail.com</p>
+      </div>
+      <div class="text-center my-8 space-y-3">
+        <i
+          class="fas fa-map-marker-alt pointer-events-none text-lg text-center text-black bg-lightGrey w-10 h-10 leading-10"
+        ></i>
+        <h3 class="text-xl text-black">office address</h3>
+        <p class="text-sm text-grey">Tehran,Tehranpars</p>
+      </div>
+      <div>
+        <ul class="flex space-x-3">
+          <li
+            class="text-lg text-center cursor-pointer text-black bg-lightGrey w-10 h-10 leading-10 hover:bg-black hover:text-white"
+          >
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li
+            class="text-lg text-center cursor-pointer text-black bg-lightGrey w-10 h-10 leading-10 hover:bg-black hover:text-white"
+          >
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li
+            class="text-lg text-center cursor-pointer text-black bg-lightGrey w-10 h-10 leading-10 hover:bg-black hover:text-white"
+          >
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li
+            class="text-lg text-center cursor-pointer text-black bg-lightGrey w-10 h-10 leading-10 hover:bg-black hover:text-white"
+          >
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div id="home-slider" class="swiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide h-screen bg-left md:bg-center bg-homeSlideOne bg-no-repeat bg-cover"
+            >
+              <div
+                class="absolute top-0 left-0 right-0 bg-lightGrey/20 w-full h-full"
+              >
+                <div class="container xl:max-w-screen-xl h-full">
+                  <div
+                    class="h-full flex items-center max-w-[40rem] text-center md:text-left"
+                  >
+                    <div>
+                      <h1
+                        class="text-3xl md:text-4xl lg:text-5xl text-black font-semibold uppercase"
+                      >
+                        we provide best service
+                      </h1>
+                      <p class="py-6 text-gray-700">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Saepe quaerat quia amet itaque iure eum quasi
+                        neque tempore cupiditate repudiandae reprehenderit quis
+                      </p>
+                      <a href="#" class="btn">get started</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide h-screen bg-left md:bg-center bg-homeSlideTwo bg-no-repeat bg-cover"
+            >
+              <div
+                class="absolute top-0 left-0 right-0 bg-lightGrey/20 w-full h-full"
+              >
+                <div class="container xl:max-w-screen-xl h-full">
+                  <div
+                    class="h-full flex items-center max-w-[40rem] text-center md:text-left"
+                  >
+                    <div>
+                      <h1
+                        class="text-3xl md:text-4xl lg:text-5xl text-black font-semibold uppercase"
+                      >
+                        from concept to creation
+                      </h1>
+                      <p class="py-6 text-gray-700">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Saepe quaerat quia amet itaque iure eum quasi
+                        neque tempore cupiditate repudiandae reprehenderit quis
+                      </p>
+                      <a href="#" class="btn">get started</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide h-screen bg-left md:bg-center bg-homeSlideThree bg-no-repeat bg-cover"
+            >
+              <div
+                class="absolute top-0 left-0 right-0 bg-lightGrey/20 w-full h-full"
+              >
+                <div class="container xl:max-w-screen-xl h-full">
+                  <div
+                    class="h-full flex items-center max-w-[40rem] text-center md:text-left"
+                  >
+                    <div>
+                      <h1
+                        class="text-3xl md:text-4xl lg:text-5xl text-black font-semibold uppercase"
+                      >
+                        making dream come to life
+                      </h1>
+                      <p class="py-6 text-gray-700">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Saepe quaerat quia amet itaque iure eum quasi
+                        neque tempore cupiditate repudiandae reprehenderit quis
+                      </p>
+                      <a href="#" class="btn">get started</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <!-- About Us -->
+      <section id="about" class="py-16">
+        <div class="container xl:max-w-screen-xl">
+          <h2
+            class="text-2xl md:text-3xl text-black border-l-8 border-yellow pl-2 font-semibold mb-8 capitalize"
+          >
+            about us
+          </h2>
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-10"
+          >
+            <div class="flex-1">
+              <video autoplay muted loop class="w-full">
+                <source src="../src/images/about-vid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="flex-1">
+              <h2
+                class="text-2xl md:text-3xl text-black font-semibold capitalize"
+              >
+                We Will Provide You The Best Work Which You Dreamt For!
+              </h2>
+              <p class="text-grey py-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et
+                vero mollitia nemo corporis consequatur aspernatur distinctio
+                dignissimos velit nam.
+              </p>
+              <a href="#" class="btn">Read More</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+            <div class="text-center bg-lightGrey p-5">
+              <h3
+                class="num text-2xl md:text-3xl mb-3 font-semibold"
+                data-goal="12"
+              >
+                0
+              </h3>
+              <p class="text-grey">years of experience</p>
+            </div>
+            <div class="text-center bg-lightGrey p-5">
+              <h3
+                class="num text-2xl md:text-3xl mb-3 font-semibold"
+                data-goal="450"
+              >
+                0
+              </h3>
+              <p class="text-grey">project completed</p>
+            </div>
+            <div class="text-center bg-lightGrey p-5">
+              <h3
+                class="num text-2xl md:text-3xl mb-3 font-semibold"
+                data-goal="300"
+              >
+                0
+              </h3>
+              <p class="text-grey">satiesfied clients</p>
+            </div>
+            <div class="text-center bg-lightGrey p-5">
+              <h3
+                class="num text-2xl md:text-3xl mb-3 font-semibold"
+                data-goal="180"
+              >
+                0
+              </h3>
+              <p class="text-grey">active workers</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services -->
+      <section id="services" class="py-16 bg-lightGrey">
+        <div class="container xl:max-w-screen-xl">
+          <h2
+            class="text-2xl md:text-3xl text-black border-l-8 border-yellow pl-2 font-semibold mb-8 capitalize"
+          >
+            our services
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div
+              class="text-center bg-white border-2 group border-lightGrey py-6 px-3"
+            >
+              <img
+                src="../src/images/service-1.png"
+                class="w-16 h-16 duration-500 mx-auto group-hover:-translate-y-2"
+                alt="building construction"
+              />
+              <h3 class="text-xl py-3">building construction</h3>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+              </p>
+            </div>
+
+            <div
+              class="text-center bg-white border-2 group border-lightGrey py-6 px-3"
+            >
+              <img
+                src="../src/images/service-2.png"
+                class="w-16 h-16 duration-500 mx-auto group-hover:-translate-y-2"
+                alt="house renovation"
+              />
+              <h3 class="text-xl py-3">house renovation</h3>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+              </p>
+            </div>
+
+            <div
+              class="text-center bg-white border-2 group border-lightGrey py-6 px-3"
+            >
+              <img
+                src="../src/images/service-3.png"
+                class="w-16 h-16 duration-500 mx-auto group-hover:-translate-y-2"
+                alt="architechture design"
+              />
+              <h3 class="text-xl py-3">architechture design</h3>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+              </p>
+            </div>
+
+            <div
+              class="text-center bg-white border-2 group border-lightGrey py-6 px-3"
+            >
+              <img
+                src="../src/images/service-4.png"
+                class="w-16 h-16 duration-500 mx-auto group-hover:-translate-y-2"
+                alt="material supply"
+              />
+              <h3 class="text-xl py-3">material supply</h3>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+              </p>
+            </div>
+
+            <div
+              class="text-center bg-white border-2 group border-lightGrey py-6 px-3"
+            >
+              <img
+                src="../src/images/service-5.png"
+                class="w-16 h-16 duration-500 mx-auto group-hover:-translate-y-2"
+                alt="construction consultant"
+              />
+              <h3 class="text-xl py-3">construction consultant</h3>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+              </p>
+            </div>
+
+            <div
+              class="text-center bg-white border-2 group border-lightGrey py-6 px-3"
+            >
+              <img
+                src="../src/images/service-6.png"
+                class="w-16 h-16 duration-500 mx-auto group-hover:-translate-y-2"
+                alt="interior design"
+              />
+              <h3 class="text-xl py-3">interior design</h3>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+              </p>
+            </div>
+
+            <div
+              class="text-center bg-white border-2 group border-lightGrey py-4 px-3"
+            >
+              <img
+                src="../src/images/service-7.png"
+                class="w-16 h-16 duration-500 mx-auto group-hover:-translate-y-2"
+                alt="building maintenance"
+              />
+              <h3 class="text-xl py-3">building maintenance</h3>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+              </p>
+            </div>
+
+            <div
+              class="text-center bg-white border-2 group border-lightGrey py-6 px-3"
+            >
+              <img
+                src="../src/images/service-8.png"
+                class="w-16 h-16 duration-500 mx-auto group-hover:-translate-y-2"
+                alt="building renovation"
+              />
+              <h3 class="text-xl py-3">building renovation</h3>
+              <p class="text-grey">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+                necessitatibus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our Projects -->
+      <section id="projects" class="py-16 bg-black">
+        <div class="container xl:max-w-screen-xl">
+          <h2
+            class="text-2xl md:text-3xl text-white border-l-8 border-yellow pl-2 font-semibold mb-8 capitalize"
+          >
+            our projects
+          </h2>
+          <div
+            id="project-cards"
+            class="grid md:grid-cols-2 xl:grid-cols-3 gap-6"
+          >
+            <a href="../src/images/project-1.jpg" class="group">
+              <div class="h-96 overflow-hidden">
+                <img
+                  src="../src/images/project-1.jpg"
+                  class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                  alt="dream home"
+                />
+              </div>
+              <div class="flex justify-between bg-white items-center">
+                <div class="py-2 px-4">
+                  <h3 class="font-semibold text-lg text-black mb-2">
+                    dream home
+                  </h3>
+                  <p class="text-grey">construction, design</p>
+                </div>
+                <div
+                  class="bg-yellow text-3xl w-20 h-20 flex items-center justify-center text-white duration-500 group-hover:bg-lightGrey group-hover:text-black"
+                >
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </a>
+            <a href="../src/images/project-2.jpg" class="group">
+              <div class="h-96 overflow-hidden">
+                <img
+                  src="../src/images/project-2.jpg"
+                  class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                  alt="dream home"
+                />
+              </div>
+              <div class="flex justify-between bg-white items-center">
+                <div class="py-2 px-4">
+                  <h3 class="font-semibold text-lg text-black mb-2">
+                    dream home
+                  </h3>
+                  <p class="text-grey">construction, design</p>
+                </div>
+                <div
+                  class="bg-yellow text-3xl w-20 h-20 flex items-center justify-center text-white duration-500 group-hover:bg-lightGrey group-hover:text-black"
+                >
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </a>
+            <a href="../src/images/project-3.jpg" class="group">
+              <div class="h-96 overflow-hidden">
+                <img
+                  src="../src/images/project-3.jpg"
+                  class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                  alt="dream home"
+                />
+              </div>
+              <div class="flex justify-between bg-white items-center">
+                <div class="py-2 px-4">
+                  <h3 class="font-semibold text-lg text-black mb-2">
+                    dream home
+                  </h3>
+                  <p class="text-grey">construction, design</p>
+                </div>
+                <div
+                  class="bg-yellow text-3xl w-20 h-20 flex items-center justify-center text-white duration-500 group-hover:bg-lightGrey group-hover:text-black"
+                >
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </a>
+            <a href="../src/images/project-4.jpg" class="group">
+              <div class="h-96 overflow-hidden">
+                <img
+                  src="../src/images/project-4.jpg"
+                  class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                  alt="dream home"
+                />
+              </div>
+              <div class="flex justify-between bg-white items-center">
+                <div class="py-2 px-4">
+                  <h3 class="font-semibold text-lg text-black mb-2">
+                    dream home
+                  </h3>
+                  <p class="text-grey">construction, design</p>
+                </div>
+                <div
+                  class="bg-yellow text-3xl w-20 h-20 flex items-center justify-center text-white duration-500 group-hover:bg-lightGrey group-hover:text-black"
+                >
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </a>
+            <a href="../src/images/project-5.jpg" class="group">
+              <div class="h-96 overflow-hidden">
+                <img
+                  src="../src/images/project-5.jpg"
+                  class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                  alt="dream home"
+                />
+              </div>
+              <div class="flex justify-between bg-white items-center">
+                <div class="py-2 px-4">
+                  <h3 class="font-semibold text-lg text-black mb-2">
+                    dream home
+                  </h3>
+                  <p class="text-grey">construction, design</p>
+                </div>
+                <div
+                  class="bg-yellow text-3xl w-20 h-20 flex items-center justify-center text-white duration-500 group-hover:bg-lightGrey group-hover:text-black"
+                >
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </a>
+            <a href="../src/images/project-6.jpg" class="group">
+              <div class="h-96 overflow-hidden">
+                <img
+                  src="../src/images/project-6.jpg"
+                  class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                  alt="dream home"
+                />
+              </div>
+              <div class="flex justify-between bg-white items-center">
+                <div class="py-2 px-4">
+                  <h3 class="font-semibold text-lg text-black mb-2">
+                    dream home
+                  </h3>
+                  <p class="text-grey">construction, design</p>
+                </div>
+                <div
+                  class="bg-yellow text-3xl w-20 h-20 flex items-center justify-center text-white duration-500 group-hover:bg-lightGrey group-hover:text-black"
+                >
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Reviews -->
+      <section id="reviews" class="py-16 bg-white">
+        <div class="container xl:max-w-screen-xl">
+          <h2
+            class="text-2xl md:text-3xl text-black border-l-8 border-yellow pl-2 font-semibold mb-8 capitalize"
+          >
+            clients reviews
+          </h2>
+          <div id="reviews-slider" class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <blockquote>
+                  <div class="flex items-center mb-7">
+                    <img
+                      src="../src/images/pic-1.png"
+                      class="w-16 h-16"
+                      alt=""
+                    />
+                    <div class="ml-4">
+                      <h3 class="font-semibold">john deo</h3>
+                      <div class="text-yellow text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative bg-lightGrey p-5 before:content-[''] before:absolute before:w-6 before:h-6 before:bg-lightGrey before:-top-3 before:rotate-45 before:left-[20px]"
+                  >
+                    <p class="text-grey leading-7">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus incidunt et ratione amet.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <div class="flex items-center mb-7">
+                    <img
+                      src="../src/images/pic-2.png"
+                      class="w-16 h-16"
+                      alt=""
+                    />
+                    <div class="ml-4">
+                      <h3 class="font-semibold">john deo</h3>
+                      <div class="text-yellow text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative bg-lightGrey p-5 before:content-[''] before:absolute before:w-6 before:h-6 before:bg-lightGrey before:-top-3 before:rotate-45 before:left-[20px]"
+                  >
+                    <p class="text-grey leading-7">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus incidunt et ratione amet.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <div class="flex items-center mb-7">
+                    <img
+                      src="../src/images/pic-3.png"
+                      class="w-16 h-16"
+                      alt=""
+                    />
+                    <div class="ml-4">
+                      <h3 class="font-semibold">john deo</h3>
+                      <div class="text-yellow text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative bg-lightGrey p-5 before:content-[''] before:absolute before:w-6 before:h-6 before:bg-lightGrey before:-top-3 before:rotate-45 before:left-[20px]"
+                  >
+                    <p class="text-grey leading-7">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus incidunt et ratione amet.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <div class="flex items-center mb-7">
+                    <img
+                      src="../src/images/pic-4.png"
+                      class="w-16 h-16"
+                      alt=""
+                    />
+                    <div class="ml-4">
+                      <h3 class="font-semibold">john deo</h3>
+                      <div class="text-yellow text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative bg-lightGrey p-5 before:content-[''] before:absolute before:w-6 before:h-6 before:bg-lightGrey before:-top-3 before:rotate-45 before:left-[20px]"
+                  >
+                    <p class="text-grey leading-7">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus incidunt et ratione amet.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <div class="flex items-center mb-7">
+                    <img
+                      src="../src/images/pic-5.png"
+                      class="w-16 h-16"
+                      alt=""
+                    />
+                    <div class="ml-4">
+                      <h3 class="font-semibold">john deo</h3>
+                      <div class="text-yellow text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative bg-lightGrey p-5 before:content-[''] before:absolute before:w-6 before:h-6 before:bg-lightGrey before:-top-3 before:rotate-45 before:left-[20px]"
+                  >
+                    <p class="text-grey leading-7">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus incidunt et ratione amet.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+              <div class="swiper-slide">
+                <blockquote>
+                  <div class="flex items-center mb-7">
+                    <img
+                      src="../src/images/pic-6.png"
+                      class="w-16 h-16"
+                      alt=""
+                    />
+                    <div class="ml-4">
+                      <h3 class="font-semibold">john deo</h3>
+                      <div class="text-yellow text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="relative bg-lightGrey p-5 before:content-[''] before:absolute before:w-6 before:h-6 before:bg-lightGrey before:-top-3 before:rotate-45 before:left-[20px]"
+                  >
+                    <p class="text-grey leading-7">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Delectus incidunt et ratione amet.
+                    </p>
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our Pricing -->
+      <section id="pricing" class="py-16 bg-lightGrey">
+        <div class="container xl:max-w-screen-xl">
+          <h2
+            class="text-2xl md:text-3xl text-black border-l-8 border-yellow pl-2 font-semibold mb-8 capitalize"
+          >
+            our pricing
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              class="bg-lightGrey border border-grey p-6 text-center shadow-sm shadow-grey"
+            >
+              <i
+                class="fas fa-home bg-yellow w-20 h-20 rounded-full leading-[80px] text-center text-3xl"
+              ></i>
+              <h3 class="my-4 text-xl">basic plan</h3>
+              <div class="mb-4">
+                <spna>$</spna><span class="text-4xl md:text-5xl">250</span>/mo
+              </div>
+              <ul class="space-y-3 mb-4">
+                <li class="text-grey">interior design</li>
+                <li class="text-grey">refurbishment</li>
+                <li class="text-grey line-through decoration-black">
+                  material supply
+                </li>
+                <li class="text-grey line-through decoration-black">
+                  maintenance
+                </li>
+                <li class="text-grey line-through decoration-black">
+                  24/7 support
+                </li>
+              </ul>
+              <a href="#" class="btn">choose plan</a>
+            </div>
+            <div
+              class="bg-yellow border border-grey p-6 text-center shadow-sm shadow-grey"
+            >
+              <i
+                class="fas fa-building bg-white w-20 h-20 rounded-full leading-[80px] text-center text-3xl"
+              ></i>
+              <h3 class="my-4 text-xl">Premium Plan</h3>
+              <div class="mb-4">
+                <spna>$</spna><span class="text-4xl md:text-5xl">650</span>/mo
+              </div>
+              <ul class="space-y-3 mb-4">
+                <li class="text-grey">interior design</li>
+                <li class="text-grey">refurbishment</li>
+                <li class="text-grey">material supply</li>
+                <li class="text-grey line-through decoration-black">
+                  maintenance
+                </li>
+                <li class="text-grey line-through decoration-black">
+                  24/7 support
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="btn text-black bg-white hover:bg-black hover:text-white"
+                >choose plan</a
+              >
+            </div>
+            <div
+              class="bg-lightGrey border border-grey p-6 text-center shadow-sm shadow-grey"
+            >
+              <i
+                class="fas fa-city bg-yellow w-20 h-20 rounded-full leading-[80px] text-center text-3xl"
+              ></i>
+              <h3 class="my-4 text-xl">Ultimate Plan</h3>
+              <div class="mb-4">
+                <spna>$</spna><span class="text-4xl md:text-5xl">1250</span>/mo
+              </div>
+              <ul class="space-y-3 mb-4">
+                <li class="text-grey">interior design</li>
+                <li class="text-grey">refurbishment</li>
+                <li class="text-grey">material supply</li>
+                <li class="text-grey">maintenance</li>
+                <li class="text-grey">24/7 support</li>
+              </ul>
+              <a href="#" class="btn">choose plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Us -->
+      <section id="contact" class="py-16 bg-black">
+        <div class="container xl:max-w-screen-xl">
+          <h2
+            class="text-2xl md:text-3xl text-white border-l-8 border-yellow pl-2 font-semibold mb-8 capitalize"
+          >
+            contact us
+          </h2>
+          <div class="flex flex-col md:flex-row justify-between gap-5">
+            <div class="flex-1">
+              <iframe
+                class="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25905.073677568857!2d51.4939955!3d35.7475059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1656708278873!5m2!1sen!2s"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="flex-1 bg-white p-5">
+              <form action="#">
+                <h3 class="text-black text-2xl mb-4 capitalize">
+                  get in touch
+                </h3>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    class="border-b-2 border-lightGrey w-full p-2 outline-none text-black focus:border-yellow"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="border-b-2 border-lightGrey w-full p-2 outline-none text-black focus:border-yellow"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="number"
+                    placeholder="Phone"
+                    class="border-b-2 border-lightGrey w-full p-2 outline-none text-black focus:border-yellow"
+                  />
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    class="border-b-2 border-lightGrey w-full p-2 outline-none text-black resize-none focus:border-yellow"
+                    id=""
+                    cols="20"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <input type="submit" value="send message" class="btn" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Our Blogs -->
+      <section id="blogs" class="py-16 bg-lightGrey">
+        <div class="container xl:max-w-screen-xl">
+          <h2
+            class="text-2xl md:text-3xl text-black border-l-8 border-yellow pl-2 font-semibold mb-8 capitalize"
+          >
+            our blogs
+          </h2>
+          <div id="blogs-slider" class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="text-center group">
+                  <div class="mx-auto w-11/12 h-64 overflow-hidden">
+                    <img
+                      src="../src/images/blog-1.jpg"
+                      class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <div class="bg-white p-5 shadow-xl shadow-lightGrey -mt-5">
+                    <h3 class="font-semibold text-lg capitalize mt-5">
+                      blog title goes here
+                    </h3>
+                    <p class="text-grey py-4 leading-7">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Assumenda, nobis!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="text-center group">
+                  <div class="mx-auto w-11/12 h-64 overflow-hidden">
+                    <img
+                      src="../src/images/blog-2.jpg"
+                      class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <div class="bg-white p-5 shadow-xl shadow-lightGrey -mt-5">
+                    <h3 class="font-semibold text-lg capitalize mt-5">
+                      blog title goes here
+                    </h3>
+                    <p class="text-grey py-4 leading-7">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Assumenda, nobis!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="text-center group">
+                  <div class="mx-auto w-11/12 h-64 overflow-hidden">
+                    <img
+                      src="../src/images/blog-3.jpg"
+                      class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <div class="bg-white p-5 shadow-xl shadow-lightGrey -mt-5">
+                    <h3 class="font-semibold text-lg capitalize mt-5">
+                      blog title goes here
+                    </h3>
+                    <p class="text-grey py-4 leading-7">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Assumenda, nobis!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="text-center group">
+                  <div class="mx-auto w-11/12 h-64 overflow-hidden">
+                    <img
+                      src="../src/images/blog-4.jpg"
+                      class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <div class="bg-white p-5 shadow-xl shadow-lightGrey -mt-5">
+                    <h3 class="font-semibold text-lg capitalize mt-5">
+                      blog title goes here
+                    </h3>
+                    <p class="text-grey py-4 leading-7">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Assumenda, nobis!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="text-center group">
+                  <div class="mx-auto w-11/12 h-64 overflow-hidden">
+                    <img
+                      src="../src/images/blog-5.jpg"
+                      class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <div class="bg-white p-5 shadow-xl shadow-lightGrey -mt-5">
+                    <h3 class="font-semibold text-lg capitalize mt-5">
+                      blog title goes here
+                    </h3>
+                    <p class="text-grey py-4 leading-7">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Assumenda, nobis!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="text-center group">
+                  <div class="mx-auto w-11/12 h-64 overflow-hidden">
+                    <img
+                      src="../src/images/blog-6.jpg"
+                      class="w-full h-full object-cover duration-500 group-hover:scale-105"
+                      alt=""
+                    />
+                  </div>
+                  <div class="bg-white p-5 shadow-xl shadow-lightGrey -mt-5">
+                    <h3 class="font-semibold text-lg capitalize mt-5">
+                      blog title goes here
+                    </h3>
+                    <p class="text-grey py-4 leading-7">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Assumenda, nobis!
+                    </p>
+                    <a href="#" class="btn">read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Logo -->
+      <section class="py-16 text-center bg-white">
+        <div class="container xl:max-w-screen-xl">
+          <div id="logo-slider" class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="../src/images/client-logo-1.png"
+                  class="w-20 mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../src/images/client-logo-2.png"
+                  class="w-20 mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../src/images/client-logo-3.png"
+                  class="w-20 mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../src/images/client-logo-4.png"
+                  class="w-20 mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../src/images/client-logo-5.png"
+                  class="w-20 mx-auto"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../src/images/client-logo-6.png"
+                  class="w-20 mx-auto"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="py-16">
+      <div class="container xl:max-w-screen-xl">
+        <div class="flex justify-center flex-wrap gap-3">
+          <a class="btn" href="#home">home</a>
+          <a class="btn" href="#about">about</a>
+          <a class="btn" href="#services">services</a>
+          <a class="btn" href="#projects">projects</a>
+          <a class="btn" href="#pricing">pricing</a>
+          <a class="btn" href="#contact">contact</a>
+          <a class="btn" href="#blogs">blogs</a>
+        </div>
+        <div class="text-center mt-6 capitalize">
+          designed by <span class="text-yellow">mr. web designer</span> and
+          developed by <span class="text-yellow">Eslam Saadat (Iman)</span>
+        </div>
+      </div>
+    </footer>
+    <!--swiper  -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Light Gallery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script>
+      lightGallery(document.querySelector("#project-cards"));
+    </script>
+    <!-- custom js -->
+    <script src="../src/js/script.js"></script>
+  </body>
+</html>
